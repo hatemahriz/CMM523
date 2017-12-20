@@ -5,6 +5,7 @@
     <title>DB Connection</title>
 </head>
 <body>
+
 <h1>Marvel Movies</h1>
 <?php
 include ("connection.php");
