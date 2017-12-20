@@ -1,21 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>DB Connection</title>
+    <meta charset="utf-8">
+    <title>PHP Login Form without Session</title>
 </head>
-<body>
 
-<h1>Marvel Movies</h1>
-<?php
-include ("connection.php");
-$sql_query = "SELECT title FROM marvelmovies";
-$result = $db->query($sql_query);
-while($row = $result->fetch_array())
-{
-    echo "<p>" .$row["title"]. "</p>";
-}
-$db->close();
-?>
+<body>
+<h1>PHP Login Form with Session</h1>
+<div class="loginBox">
+    <h3>Login Form</h3>
+    <br><br>
+    <form method="post" action="login.php">
+        <label>Username:</label><br>
+        <input type="text" name="username" placeholder="username" /><br><br>
+        <label>Password:</label><br>
+        <input type="password" name="password" placeholder="password" />  <br><br>
+        <input type="submit" name="submit" value = "login"/>
+    </form>
+    <div class="error"><?php //echo $error;?><?php //echo $username; echo $password;?></div>
+
+</div>
 </body>
 </html>
