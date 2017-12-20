@@ -10,7 +10,7 @@ include("connection.php");
 
 $sql_query = "SELECT * FROM superheros  WHERE superpower LIKE '%laser%'";
 
-$result = $db->query($sql_query);
+$result = mysqli_query($db,$sql_query);
 
 while($row = $result->fetch_array())
 {
