@@ -8,6 +8,11 @@
 <?php
 include("connection.php");
 
+if ($db)
+{
+        echo "connection successful. \n";
+}
+
 $sql_query = "SELECT * FROM marvelmovies";
 
 $result = mysqli_query($db,$sql_query);
