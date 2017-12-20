@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+<?php
+include("connection.php");
+
+$sql_query = "SELECT * FROM superheros  WHERE superpower LIKE '%laser%'";
+
+$result = $db->query($sql_query);
+
+while($row = $result->fetch_array())
+{
+echo "<p>" . $row['superheroName'] . "</p>";
+}
+
+$result->close();
+$db->close();
+?>
+
 <h1>This is my first webpage</h1>
 <h2>Hatem Ahriz</h2>
 </body>
